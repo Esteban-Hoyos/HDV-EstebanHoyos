@@ -1,6 +1,359 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
 
+body {
+    background-color: #f8f9fa;
+    color: #333;
+}
 
 /* Color de fondo columna izquierda*/
-.bg-primary{
+.bg-primary {
     background-color: #2c3e50 !important;
+}
+
+/* TARJETA PRINCIPAL CV */
+.cv-card {
+    border: none !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15) !important;
+    transition: all 0.3s ease;
+}
+
+.cv-card:hover {
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* SIDEBAR IZQUIERDO */
+.sidebar {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%) !important;
+    min-height: 100%;
+}
+
+.profile-img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+/* CONTACTO */
+.contact-link {
+    transition: all 0.3s ease;
+    padding: 5px 0;
+    display: inline-block;
+}
+
+.contact-link:hover {
+    margin-left: 8px;
+    opacity: 0.8;
+}
+
+/* SECCIONES SIDEBAR */
+.sidebar section h5 {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 10px;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+/* HABILIDADES */
+.skill-item {
+    padding: 8px 0;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-left: 8px;
+}
+
+.skill-item .fw-600 {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Barras de habilidades */
+.skill-bar-primary {
+    background: linear-gradient(90deg, #4ECDC4, #6FE7DE) !important;
+    box-shadow: 0 2px 8px rgba(78, 205, 196, 0.5);
+    border-radius: 3px;
+}
+
+.progress {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* BADGES TECNOLOGÍAS */
+.tech-badge {
+    font-size: 0.8rem;
+    padding: 6px 12px !important;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* CONTENIDO PRINCIPAL */
+.main-content {
+    background-color: #ffffff;
+}
+
+.main-content h4,
+.main-content h5 {
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.main-content h4 {
+    border-bottom: 2px solid #4ECDC4 !important;
+    padding-bottom: 12px;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+}
+
+.text-primary {
+    color: #2c3e50 !important;
+}
+
+/* TARJETAS - EXPERIENCIA Y EDUCACIÓN */
+.experience-card,
+.education-card {
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08) !important;
+    transition: all 0.3s ease;
+    border-left: 4px solid #4ECDC4;
+    position: relative;
+    overflow: hidden;
+}
+
+.experience-card::before,
+.education-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(78, 205, 196, 0.08), rgba(78, 205, 196, 0.04));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.experience-card:hover,
+.education-card:hover {
+    box-shadow: 0 12px 30px rgba(78, 205, 196, 0.25) !important;
+    transform: translateY(-5px);
+    border-left: 4px solid #00D2D3;
+}
+
+.experience-card:hover::before,
+.education-card:hover::before {
+    opacity: 1;
+}
+
+.experience-card:hover .card-title,
+.education-card:hover .card-title {
+    color: #4ECDC4;
+}
+
+.experience-card:hover .text-primary,
+.education-card:hover .text-primary {
+    color: #4ECDC4 !important;
+}
+
+.card-body {
+    padding: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.card-title {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.card-body ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.card-body li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.card-body li:before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #4ECDC4;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* BADGES */
+.badge {
+    font-weight: 600;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    border-radius: 4px;
+}
+
+.badge.bg-success {
+    background-color: #27ae60 !important;
+}
+
+.badge.bg-secondary {
+    background-color: #7f8c8d !important;
+}
+
+.badge.bg-info {
+    background-color: #4ECDC4 !important;
+    border-radius: 12px;
+}
+
+/* BOTÓN DESCARGAR */
+.btn-primary {
+    background-color: #2c3e50;
+    border-color: #2c3e50;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background-color: #4ECDC4;
+    border-color: #4ECDC4;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(78, 205, 196, 0.4);
+}
+
+.btn-primary:disabled {
+    background-color: #95a5a6;
+    border-color: #95a5a6;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+.btn-lg {
+    padding: 12px 40px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+}
+
+/* IMPRESIÓN Y PDF */
+@media print {
+    body {
+        background-color: white;
+    }
+
+    .no-print {
+        display: none !important;
+    }
+
+    .cv-card {
+        box-shadow: none !important;
+        page-break-inside: avoid;
+    }
+
+    .sidebar {
+        box-shadow: none;
+    }
+
+    .experience-card,
+    .education-card {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+        page-break-inside: avoid;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+
+    .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .my-5 {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .p-5 {
+        padding: 1.5rem !important;
+    }
+
+    .profile-img {
+        width: 140px;
+        height: 140px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .sidebar section h5 {
+        font-size: 0.95rem;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .skill-bar-primary {
+        box-shadow: none;
+    }
+
+    .progress {
+        box-shadow: none;
+    }
+
+    .tech-badge {
+        box-shadow: none;
+    }
+
+    .btn-lg:hover {
+        transform: none;
+    }
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .sidebar {
+        min-height: auto;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .main-content h4 {
+        font-size: 1.1rem;
+    }
+
+    .p-5 {
+        padding: 1.5rem !important;
+    }
+
+    .card-body li {
+        font-size: 0.9rem;
+    }
 }
